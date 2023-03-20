@@ -44,9 +44,8 @@ const Home = ({ netflixOriginals, trendingNow, topRated, actionMovies, comedyMov
 					<Row title="Trending Now" movies={trendingNow} />
 					<Row title="Top Rated" movies={topRated} />
 					<Row title="Action Thrillers" movies={actionMovies} />
-					{/* My List Component */}
 					<Row title="Comedies" movies={comedyMovies} />
-					<Row title="Scary Movies" movies={horrorMovies} />
+					<Row title="Horror Movies" movies={horrorMovies} />
 					<Row title="Romance Movies" movies={romanceMovies} />
 					<Row title="Documentaries" movies={documentaries} />
 				</section>
