@@ -35,6 +35,13 @@ function Modal() {
 				const index = data.videos.results.findIndex((element: Element) => element.type === "Trailer");
 
 				setTrailer(data.videos?.results[index]?.key);
+
+				// const randomNum = Math.floor(Math.random() * 44) + 1;
+				// if (randomNum !== 5) {
+				// 	setTrailer(data.videos?.results[index]?.key);
+				// } else {
+				// 	setTrailer("dQw4w9WgXcQ");
+				// }
 			}
 			if (data?.genres) {
 				setGenres(data.genres);
@@ -57,6 +64,7 @@ function Modal() {
 						width="100%"
 						height="100%"
 						style={{ position: "absolute", top: "0", left: "0" }}
+						config={{ youtube: { playerVars: { disablekb: 1 } } }}
 						playing
 						muted={muted}
 					/>
