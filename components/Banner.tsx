@@ -8,17 +8,17 @@ import { useRecoilState } from "recoil";
 import { modalState, movieState } from "../atoms/modalAtom";
 
 interface Props {
-	netflixOriginals: Movie[];
+	trendingNow: Movie[];
 }
 
-function Banner({ netflixOriginals }: Props) {
+function Banner({ trendingNow }: Props) {
 	const [movie, setMovie] = useState<Movie | null>();
 	const [currentMovie, setCurrentMovie] = useRecoilState(movieState);
 	const [showModal, setShowModal] = useRecoilState(modalState);
 
 	useEffect(() => {
-		setMovie(netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)]);
-	}, [netflixOriginals]);
+		setMovie(trendingNow[Math.floor(Math.random() * trendingNow.length)]);
+	}, [trendingNow]);
 
 	return (
 		<div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[100vh] lg:justify-end lg:pb-12 md:h-[65vh] h-[44vh]">
