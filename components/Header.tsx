@@ -42,7 +42,9 @@ function Header() {
 			<div className="flex space-x-4 text-sm font-light item-center">
 				<SearchIcon className="hidden w-6 h-6 sm:inline" />
 				<p className="hidden lg:inline">Kids</p>
-
+				<button className="flex transition duration-100 hover:text-slate-300" onClick={logout}>
+					logout
+				</button>
 				<BellIcon className="w-6 h-6" />
 				<img src="https://rb.gy/g1pwyx" alt="" className="rounded cursor-pointer" />
 			</div>
