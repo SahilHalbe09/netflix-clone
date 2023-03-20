@@ -44,10 +44,7 @@ function Header() {
 				<p className="hidden lg:inline">Kids</p>
 
 				<BellIcon className="w-6 h-6" />
-
-				<Link href="/account">
-					<img src="https://rb.gy/g1pwyx" alt="" className="rounded cursor-pointer" />
-				</Link>
+				<img src="https://rb.gy/g1pwyx" alt="" className="rounded cursor-pointer" />
 			</div>
 		</header>
 	);
