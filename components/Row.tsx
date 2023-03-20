@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Movie } from "../typings";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 import Thumbnail from "./Thumbnail";
@@ -12,6 +12,7 @@ interface Props {
 
 function Row({ title, movies }: Props) {
 	const rowRef = useRef<HTMLDivElement>(null);
+	const elRef = useRef<null | HTMLDivElement>(null);
 	const [isMoved, setIsMoved] = useState(false);
 
 	const handleClick = (direction: string) => {
@@ -24,6 +25,31 @@ function Row({ title, movies }: Props) {
 
 			rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
 		}
+	};
+
+	const useHorizontalScroll = () => {
+		useEffect(() => {
+			const el = elRef.current;
+
+			if (el) {
+				const onWheel = (e: any) => {
+					if (e.delay == 0) return;
+
+					e.preventDefault();
+
+					el.scrollTo({
+						left: el.scrollLeft + e.delay,
+						behavior: "smooth",
+					});
+				};
+
+				el.addEventListener("wheel", onWheel);
+
+				return () => el.removeEventListener("wheel", onWheel);
+			}
+		}, []);
+
+		return elRef;
 	};
 
 	return (
