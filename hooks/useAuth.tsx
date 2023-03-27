@@ -41,9 +41,11 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 				setLoading(false);
 			} else {
 				// Not logged in...
-				setUser(null);
-				setLoading(true);
-				router.push("/login");
+				// setUser(null);
+				setUser(user);
+				// setLoading(true);
+				setLoading(false);
+				router.push("/");
 			}
 
 			setInitialLoading(false);
@@ -87,6 +89,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 			})
 			.catch((error) => alert(error.message))
 			.finally(() => setLoading(false));
+
+		router.push("/login");
 	};
 
 	const memoValue = useMemo(

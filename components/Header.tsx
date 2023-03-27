@@ -45,6 +45,9 @@ function Header() {
 				<button className="flex transition duration-100 hover:text-slate-300" onClick={logout}>
 					logout
 				</button>
+				<Link href={"/login"} className="flex transition duration-100 hover:text-slate-300">
+					login
+				</Link>
 				<BellIcon className="w-6 h-6" />
 				<img src="https://rb.gy/g1pwyx" alt="" className="rounded cursor-pointer" />
 			</div>
