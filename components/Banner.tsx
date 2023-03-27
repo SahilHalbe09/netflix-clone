@@ -30,7 +30,13 @@ function Banner({ trendingNow }: Props) {
 			<p className="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-xl text-shadow-md">{movie?.overview}</p>
 
 			<div className="flex space-x-3">
-				<button className="text-black bg-white bannerButton">
+				<button
+					className="text-black bg-white bannerButton"
+					onClick={() => {
+						setCurrentMovie(movie!);
+						setShowModal(true);
+					}}
+				>
 					<FaPlay className="w-4 h-4 text-black md:h-7 md:w-7" /> Play
 				</button>
 				<button

@@ -93,6 +93,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 		router.push("/login");
 	};
 
+	// const 
+
 	const memoValue = useMemo(
 		() => ({
 			user,
