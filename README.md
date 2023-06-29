@@ -14,7 +14,6 @@ This is a Netflix clone web application built with Next.js, React.js, Tailwind C
  - [Usage](#usageexamples)
  - [Demo](#demo)
  - [Screenshots](#screenshots)
- - [References](#references)
  - [Contributing](#contributing)
  - [Contact](#feedback--contact)
 ## Features
@@ -90,13 +89,13 @@ Here is the video demo of the project:
 ## Screenshots
 
 ### Login Page
-![Login Screen](https://i.paste.pics/MKKP9.png)
+![Login Screen](https://i.ibb.co/zxhP5Y0/image.png)
 
 ### Home Page
-![Home page](https://i.paste.pics/MKKSI.png)
+![Home page](https://i.ibb.co/6PcpyWn/image.png)
 
 ### Trailer Modal
-![Trailer modal](https://i.paste.pics/MKKU9.png)
+![Trailer modal](https://i.ibb.co/LrKbbPK/image.png)
 
 
 ## Contributing
@@ -105,4 +104,4 @@ Contributions are always welcome!
 
 ## Feedback / Contact
 
-If you have any feedback, please reach out to me at sahilhalbe.business@gmail.com
+If you have any feedback, please reach out to me at sahilhalbe.business@gmail.com or visit [my site](https://www.thesahildev.in/)
